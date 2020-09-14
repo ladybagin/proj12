@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style id="id1">
+      
+/* 
+        #box2 {
+            position: relative;
+            top: -50px;
+            left: 50px;
+
+        }
+
+        #box3 {
+            position: relative;
+            top: -100px;
+            left: 100px;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- <form name="form1">
+        <input type="color" name="color1" value="#ffcc00">
+    </form> -->
+<form name="myf">
+ Введите высоту:  <input type="text" name="h" value="100">
+ Введите ширину:  <input type="text" name="w" value="100">
+ Введите количество блоков: <input type="text" name="col" value="3" > 
+    <input type="button" onclick="say()" value="Отправить!">
+</form>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+    <script>
+function say() {
+    let h1=myf.h.value;
+    let w1=myf.w.value;
+    let col1=myf.col.value;
+    let s1=``;
+    // let s2=``;
+    // s2=`<div id="box1"></div>`;
+    // for (i=1;i<=col1; i++) {
+    //     s2+=i;
+    // }
+    // box1.innerHTML=s2;
+ colors = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',]
+        let s = '#';
+        let c = 0;
+        for (i=0; i<6; i++) {
+            c = Math.floor(Math.random()*colors.length);
+            s += colors[c];
+        }
+        // alert(s);
+        // form1.color1.value = s;
+s1=` div {
+    height: ${h1}px;
+    width: ${w1}px;
+    border: 4px solid black;
+}
+#box2 {
+            position: relative;
+            top: -50px;
+            left: 50px;
+
+        }
+
+        #box3 {
+            position: relative;
+            top: -100px;
+            left: 100px;
+        }`;
+        box1.style.background = s;
+        box2.style.background = s;
+        box3.style.background = s;
+      id1.innerHTML=s1;
+    }
+
+    </script>
+
+   
+
+</body>
+</html>
